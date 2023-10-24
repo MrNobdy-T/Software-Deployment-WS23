@@ -65,7 +65,7 @@ stages:
         displayName: Deploy
         environment: $(environmentName)
     pool:
-        name: DESKTOP-INTQ8KD
+        name: Default
         demands:
           - agent.name -equals DESKTOP-INTQ8KD
         strategy:
