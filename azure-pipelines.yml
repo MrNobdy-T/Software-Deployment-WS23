@@ -7,7 +7,7 @@ trigger:
   - main
 
 pool:
-  name: Default
+  name: DESKTOP-INTQ8KD
   demands:
     - agent.name -equals DESKTOP-INTQ8KD
 variables:
