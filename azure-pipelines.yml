@@ -29,8 +29,10 @@ stages:
     jobs:
       - job: Build
         displayName: Build
-        pool:
-          vmImage: $(vmImageName)
+    pool:
+        name: Default
+        demands:
+          - agent.name -equals DESKTOP-INTQ8KD
 
         steps:
           - task: NodeTool@0
