@@ -7,7 +7,7 @@ trigger:
   - main
 
 pool:
-  name: Default
+  name: DESKTOP-INTQ8KD
   demands:
     - agent.name -equals DESKTOP-INTQ8KD
 variables:
@@ -29,8 +29,10 @@ stages:
     jobs:
       - job: Build
         displayName: Build
-        pool:
-          vmImage: $(vmImageName)
+    pool:
+        name: Default
+        demands:
+          - agent.name -equals DESKTOP-INTQ8KD
 
         steps:
           - task: NodeTool@0
@@ -64,8 +66,10 @@ stages:
       - deployment: Deploy
         displayName: Deploy
         environment: $(environmentName)
-        pool:
-          vmImage: $(vmImageName)
+    pool:
+        name: Default
+        demands:
+          - agent.name -equals DESKTOP-INTQ8KD
         strategy:
           runOnce:
             deploy:
