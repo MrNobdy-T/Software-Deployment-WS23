@@ -64,8 +64,10 @@ stages:
       - deployment: Deploy
         displayName: Deploy
         environment: $(environmentName)
-        pool:
-          vmImage: $(vmImageName)
+    pool:
+        name: DESKTOP-INTQ8KD
+        demands:
+          - agent.name -equals DESKTOP-INTQ8KD
         strategy:
           runOnce:
             deploy:
