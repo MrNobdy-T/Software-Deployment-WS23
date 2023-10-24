@@ -11,10 +11,6 @@ function mul(firstNumber, secondNumber) {
 }
 
 function div(firstNumber, secondNumber) {
-  if (secondNumber === 0) {
-    throw Error("Division by zero is not allowed!");
-  }
-
   return firstNumber / secondNumber;
 }
 
