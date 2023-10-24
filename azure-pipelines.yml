@@ -7,8 +7,9 @@ trigger:
   - main
 
 pool:
-  name: Default"
-
+  name: Default
+  demands:
+    - agent.name -equals DESKTOP-INTQ8KD
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: "57c99ec7-bb44-4bdd-9551-5764a0c03cf9"
