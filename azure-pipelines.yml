@@ -41,7 +41,6 @@ stages:
           displayName: "Install Node.js"
 
         - script: |
-            cd .\Lab2
             npm install
             npm run test
           displayName: "npm run tests"
