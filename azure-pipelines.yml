@@ -43,7 +43,11 @@ stages:
         - script: |
             cd .\Lab2
             npm install
-            npm run test
+            npm test
+            if [ $? -ne 0 ]; then
+              echo "Tests failed. Exiting with an error."
+              exit 1
+            fi
           displayName: "npm run tests"
 
         - task: ArchiveFiles@2
