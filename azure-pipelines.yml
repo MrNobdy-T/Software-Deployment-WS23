@@ -40,12 +40,9 @@ stages:
 
         - script: |
             npm install
-            npm test
-            if [ $? -ne 0 ]; then
-              echo "Tests failed. Exiting with an error."
-              exit 1
-            fi
+            npm run test test 
           displayName: "npm run tests"
+          workingDirectory: .\Lab2
 
         - task: ArchiveFiles@2
           displayName: "Archive files"
