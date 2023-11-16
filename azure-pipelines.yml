@@ -31,8 +31,6 @@ stages:
         displayName: Build
     pool:
       name: Default
-      demands:
-        - agent.name -equals DESKTOP-INTQ8KD
 
       steps:
         - task: NodeTool@0
