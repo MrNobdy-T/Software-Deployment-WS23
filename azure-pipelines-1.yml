@@ -21,4 +21,4 @@ steps:
     npm build
     npm run test
   displayName: 'Tests'
-
+  workingDirectory: '$(System.DefaultWorkingDirectory)'
