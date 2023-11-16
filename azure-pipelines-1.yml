@@ -17,8 +17,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    npm build
     npm run test
   displayName: 'Tests'
   workingDirectory: '$../../Lab2/'
